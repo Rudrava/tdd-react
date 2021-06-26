@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel index.html",
     "e2e": "cypress open",
-    "unit": "jest test/**/*.spec.js"
+    "unit": "jest test/**/*.spec.js",
+    "lint": "eslint cypress/integration/**/*.spec.js src/**/*.js test/**/*.js"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
@@ -14,9 +15,15 @@
     "@babel/preset-react": "^7.14.5",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^27.0.5",
     "cypress": "^7.6.0",
     "enzyme": "^3.11.0",
+    "eslint": "^7.29.0",
+    "eslint-config-codingitwrong": "^0.1.4",
+    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-react": "^7.24.0",
     "jsdom": "^16.6.0",
     "jsdom-global": "^3.0.2",
     "parcel-bundler": "^1.12.5"

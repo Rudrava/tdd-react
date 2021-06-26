@@ -4,7 +4,15 @@
         "@babel/preset-react"
     ],
     "plugins": [
-        "@babel/plugin-syntax-dynamic-import",
-        "@babel/plugin-syntax-jsx"
+        [
+            "@babel/plugin-syntax-dynamic-import",
+            {},
+            "import-plugin"
+        ],
+        [
+            "@babel/plugin-syntax-jsx",
+            {},
+            "jsx-plugin"
+        ]
     ]
 }
