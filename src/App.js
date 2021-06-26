@@ -1,10 +1,8 @@
 import React from "react";
+import RestrauntListPage from "./pages/RestrauntListPage";
 
 export default class App extends React.Component {
-  state = {
-    name: "rudrava",
-  };
   render() {
-    return <h1 className="hello">Namuste {this.state.name}</h1>;
+    return <RestrauntListPage />;
   }
 }

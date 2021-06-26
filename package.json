@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "e2e": "cypress open",
-    "unit": "jest test/**/*.spec.js",
+    "unit": "jest --watch test/**/*.spec.js",
     "lint": "eslint cypress/integration/**/*.spec.js src/**/*.js test/**/*.js"
   },
   "devDependencies": {
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "jest": "^27.0.5",
+    "pages": "^0.0.16",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
