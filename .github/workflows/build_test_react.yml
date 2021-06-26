@@ -33,4 +33,4 @@ jobs:
        run: |
         yarn --freeze-lockfile install
         yarn unit
-        yarn e2e
+
