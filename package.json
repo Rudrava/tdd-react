@@ -7,7 +7,7 @@
     "start": "parcel index.html",
     "e2e": "cypress open",
     "unit": "jest test/**/*.spec.js",
-    "lint": "eslint cypress/integration/**/*.spec.js src/**/*.js test/**/*.js"
+    "lint": "eslint cypress/integration/**/*.spec.js src test"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
