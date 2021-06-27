@@ -25,9 +25,7 @@ jobs:
       - run:
           name: Run UNIT tests 
           command:  yarn unit
-      - run:
-          name:  LINTING 
-          command:  yarn lint
+      
 
 workflows:
   CI_WITH_CYPRESS: 
