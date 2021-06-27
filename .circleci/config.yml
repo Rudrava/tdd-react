@@ -19,10 +19,9 @@ jobs:
           pkg-manager: yarn
 
       - run: yarn global add wait-on   
-      - run: yarn start & wait-on http://localhost:1234   
       - run:
           name: Run tests
-          command:  $(yarn bin)/cypress run
+          command:  bin/cypress
 
 workflows:
   sample: 
