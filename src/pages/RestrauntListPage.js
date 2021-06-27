@@ -10,22 +10,34 @@ const RestrauntListPage = () => {
     setModalOpen(false);
     setRestaurants((r) => [...r, newRestrauntName]);
   };
-  console.log(modalOpen);
 
   return (
     <>
       <Row>
         <Button
           className="modal-trigger"
-          href="#modal1"
+          href="#newRestaurantModal"
           node="button"
-          // onClick={() => setModalOpen(true)}
           data-test="addRestrauntButton"
         >
           Add Restaurant
         </Button>
       </Row>
-      <Modal id="modal1" header="New Restaurant" open={modalOpen}>
+      <Modal
+        id="newRestaurantModal"
+        header="New Restaurant"
+        open={modalOpen}
+        options={{
+          onCloseEnd: () => {
+            document
+              .getElementById("newRestaurantModal")
+              .querySelector("#newRestaunrantNameField").value = "";
+          },
+          onOpenEnd: () => {
+            document.querySelector("input").focus();
+          },
+        }}
+      >
         <Row>
           <NewRestrauntForm onSave={onSave} />
         </Row>
