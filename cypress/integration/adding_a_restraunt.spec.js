@@ -24,6 +24,11 @@ describe("adding a restraunt", () => {
     cy.get('[data-test="newRestrauntName"]').type(restrauntName);
     cy.get('[data-test="saveNewRestrauntButton"]').click();
 
+    // checks restaurant name clears out
+    cy.get('[data-test="addRestrauntButton"]').click();
+    cy.get('[data-test="newRestrauntName"]').invoke("val").should("eq", "");
+    cy.get('[data-test="cancelNewRestaurantForm"]').click();
+
     // checks if modal was closed and new restaurant  was added
     cy.get('[data-test="no-restaurant-message"]').should("not.exist");
     cy.get('[data-test="newRestrauntName"]').should("not.be.visible");
