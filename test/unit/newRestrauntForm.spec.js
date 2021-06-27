@@ -11,14 +11,16 @@ describe("NewRestrauntForm", () => {
       saveHandler = jest.fn();
 
       wrapper = shallow(<NewRestrauntForm onSave={saveHandler} />);
+    });
+
+    it("calls the onSave handler", () => {
       wrapper
         .find("[data-test='newRestrauntName']")
         .simulate("change", { target: { value: "Zaika" } });
       wrapper.find('[data-test="saveNewRestrauntButton"]').simulate("click");
-    });
-    it("calls the onSave handler", () => {
       expect(saveHandler).toHaveBeenCalledWith("Zaika");
     });
+
     it("input field is empty", () => {
       expect(
         wrapper.find("[data-test='newRestrauntName']").props().value
