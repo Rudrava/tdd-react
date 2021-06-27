@@ -22,7 +22,7 @@ jobs:
       - run: yarn start & wait-on http://localhost:1234   
       - run:
           name: Run tests
-          command: $(yarn bin)/cypress run --record  --key <record_key>
+          command: yarn e2e
 
 workflows:
   sample: 
