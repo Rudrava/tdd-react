@@ -12,11 +12,14 @@ orbs:
 jobs:
   build-and-test:  
     docker:
-      - image: cimg/node:15.1
+      - image: cypress/base:8
     steps:
       - checkout
       - node/install-packages: 
           pkg-manager: yarn
+
+      - run: yarn global add wait-on   
+      - run: yarn start & wait-on http://localhost:1234   
       - run:
           name: Run tests
           command: $(yarn bin)/cypress run --record  --key <record_key>
