@@ -12,7 +12,7 @@ orbs:
 jobs:
   build-and-test:  
     docker:
-      - image: cypress/base:8
+      - image: cypress/base:16
     steps:
       - checkout
       - node/install-packages: 
