@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "e2e": "cypress open",
-    "unit": "jest --watch test/**/*.spec.js",
+    "unit": "jest test/**/*.spec.js",
     "lint": "eslint cypress/integration/**/*.spec.js src/**/*.js test/**/*.js"
   },
   "devDependencies": {
