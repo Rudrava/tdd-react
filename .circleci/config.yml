@@ -20,8 +20,11 @@ jobs:
 
       - run: yarn global add wait-on   
       - run:
-          name: Run tests
+          name: Run E2E tests 
           command:  bin/cypress
+      - run:
+          name: Run UNIT tests 
+          command:  yarn unit
 
 workflows:
   sample: 
