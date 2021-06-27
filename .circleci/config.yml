@@ -31,7 +31,7 @@ jobs:
       #     pkg-manager: yarn 
       - run:
           name: Run tests
-          command: $(yarn bin)/cypress run --record  --key <record_key>
+          command: $(yarn bin)/cypress run --record --key <record_key>
 
 workflows:
   # Below is the definition of your workflow.
